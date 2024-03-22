@@ -37,3 +37,22 @@ const calcAge2 = function (birthYear) {
 
 const age2 = calcAge2(1991);
 console.log(age2);
+
+// THE DIFFERENCE BETWEN DECLARATION AND EXPRESSION IS THAT IN DECLARATION YOU CAN
+//  DECLARE VARIABLES THAT USE THE FUNCTION BEFORE IT IS DECLARED
+
+//Arrow Function
+
+const calcAge3 = (birthYear) => {
+	return 2037 - birthYear;
+};
+
+const age3 = calcAge3(1991);
+console.log(age3, "arrow function");
+
+const yearsUntilRetirement = (year, name) => {
+	const age = 2023 - year;
+	return `${65 - age} is how many years ${name} has until retirement.`;
+};
+
+console.log(yearsUntilRetirement(1991, "Dan"));
