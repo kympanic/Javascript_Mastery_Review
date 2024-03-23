@@ -67,23 +67,19 @@ function fruitProcessor(apples, oranges) {
 
 console.log(fruitProcessor(3, 2));
 
-// FIRST CHALLENGE
+// *************  ARROW METHODS(BASIC)  *************
 
-function calcAverage(num1, num2, num3) {
-	return (num1 + num2 + num3) / 3;
-}
+const friends = ["Michael", "Steven", "Peter"];
+friends.push("Jay");
+// front of the array
+friends.unshift("John");
+//remove at back
+friends.pop();
+//remove at front
+friends.shift();
+//returns index of value
+friends.indexOf("Steven");
+//return true or false if in array
+friends.includes("Steven");
 
-const scoreDolphins = calcAverage(44, 23, 71);
-const scoreKoalas = calcAverage(65, 54, 49);
-
-const checkWinner = function (avgDolphins, avgKoalas) {
-	if (avgDolphins > avgKoalas) {
-		console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
-	} else if (avgKoalas > avgDolphins) {
-		console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
-	} else {
-		console.log("No team wins...");
-	}
-};
-
-checkWinner(scoreDolphins, scoreKoalas);
+// *************  OBJECT METHODS  *************
