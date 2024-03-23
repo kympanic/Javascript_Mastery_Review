@@ -22,7 +22,9 @@ logger();
 const appleJuice = fruitProcessor(5, 0);
 console.log(appleJuice);
 
-//Function declaration
+// *************  DECLARATIONS AND EXPRESSIONS *************
+
+// Function declaration
 function calcAge1(birthYear) {
 	return 2024 - birthYear;
 }
@@ -41,8 +43,7 @@ console.log(age2);
 // THE DIFFERENCE BETWEN DECLARATION AND EXPRESSION IS THAT IN DECLARATION YOU CAN
 //  DECLARE VARIABLES THAT USE THE FUNCTION BEFORE IT IS DECLARED
 
-//Arrow Function
-
+// *************  ARROW FUNCTIONS  *************
 const calcAge3 = (birthYear) => {
 	return 2037 - birthYear;
 };
@@ -51,7 +52,7 @@ const yearsUntilRetirement = (year, name) => {
 	return `${65 - age} is how many years ${name} has until retirement.`;
 };
 
-// FUNCTIONS CALLING OTHER FUNCTIONS
+// *************  FUNCTIONS CALLING OTHER FUNCTIONS  *************
 
 function cutFruit(fruit) {
 	return fruit * 4;
@@ -65,3 +66,24 @@ function fruitProcessor(apples, oranges) {
 }
 
 console.log(fruitProcessor(3, 2));
+
+// FIRST CHALLENGE
+
+function calcAverage(num1, num2, num3) {
+	return (num1 + num2 + num3) / 3;
+}
+
+const scoreDolphins = calcAverage(44, 23, 71);
+const scoreKoalas = calcAverage(65, 54, 49);
+
+const checkWinner = function (avgDolphins, avgKoalas) {
+	if (avgDolphins > avgKoalas) {
+		console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+	} else if (avgKoalas > avgDolphins) {
+		console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
+	} else {
+		console.log("No team wins...");
+	}
+};
+
+checkWinner(scoreDolphins, scoreKoalas);
