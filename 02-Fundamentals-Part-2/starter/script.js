@@ -83,3 +83,56 @@ friends.indexOf("Steven");
 friends.includes("Steven");
 
 // *************  OBJECT METHODS  *************
+
+const daniel = {
+	firstName: "Daniel",
+	lastName: "Yoo",
+	birthYear: 1987,
+	job: "teacher",
+	friends: ["Amy", "John", "James"],
+	hasDriversLicense: true,
+
+	// calcAge: function (birthYear) {
+	// 	return 2024 - birthYear;
+	// },
+	// calcAge: function (birthYear) {
+	// 	return 2024 - this.birthYear;
+	// },
+	calcAge: function () {
+		this.age = 2024 - this.birthYear;
+		return this.age;
+	},
+	getSummary: function () {
+		return `${this.firstName} is a ${this.calcAge()}-year old ${
+			daniel.job
+		}, and he has ${this.hasDriversLicense ? "a" : "no"} driver's license.`;
+	},
+};
+console.log(daniel.calcAge());
+// console.log(daniel["calcAge"](birthYear));
+
+// Challenge
+const mark = {
+	fullName: "Mark Miller",
+	mass: 78,
+	height: 1.69,
+	calcBMI: function () {
+		this.bmi = this.mass / this.height ** 2;
+		return this.bmi;
+	},
+};
+
+const john = {
+	fullName: "John Smith",
+	mass: 92,
+	height: 1.95,
+	calcBMI: function () {
+		this.bmi = this.mass / this.height ** 2;
+		return this.bmi;
+	},
+};
+
+mark.calcBMI();
+john.calcBMI();
+
+console.log(mark.bmi);

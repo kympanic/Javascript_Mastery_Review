@@ -40,3 +40,5 @@ let totals = [
 	calcTip(bills[1]) + bills[1],
 	calcTip(bills[2]) + bills[2],
 ];
+
+// CHALLENGE 3
